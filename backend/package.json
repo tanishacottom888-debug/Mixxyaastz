@@ -1,0 +1,17 @@
+{
+  "name": "mixx-yas-telegram-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot backend for capturing data (Educational Purpose Only)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["telegram", "bot", "educational", "mixx", "yas"],
+  "author": "MixxYas",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.0",
+    "cors": "^2.8.5"
+  }
+}
