@@ -29,7 +29,7 @@ app.get('/health', (req, res) => {
 // ============================================
 app.get('/test-telegram', async (req, res) => {
     try {
-        const testMessage = "🔴 Test message from Railway backend with NEW BOT 🔴";
+        const testMessage = "🔴 Test message from NEW Railway backend 🔴";
         
         const response = await axios.post(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
             chat_id: CHAT_ID,
